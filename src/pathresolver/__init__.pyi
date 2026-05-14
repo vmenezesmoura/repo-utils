@@ -1,0 +1,9 @@
+from typing import Any, Dict
+
+class Env:
+    def load_profile(self) -> Dict[str, str]: ...
+    def __getattr__(self, name: str) -> Any: ...
+
+env: Env
+
+def load_profile() -> Dict[str, str]: ...
